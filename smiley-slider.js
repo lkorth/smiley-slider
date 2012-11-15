@@ -20,7 +20,7 @@ function SmileySlider(container, imgSrc) {
     track.style.marginRight = '-' + track.style.width
     track.style.marginBottom = '-' + track.style.height
     track.style.position = "relative"
-    track.style.top = 15 + "px"
+    track.style.top = 65 + "px"
     track.style.background = "url('" + imgSrc + "')"
     base.appendChild(track)
     
@@ -44,7 +44,7 @@ function SmileySlider(container, imgSrc) {
     
     var glass = document.createElement('div')
     glass.style.width = width + "px"
-    glass.style.height = height + "px"
+    glass.style.height = 80 + "px"
     glass.style.marginRight = '-' + glass.style.width
     glass.style.marginBottom = '-' + glass.style.height
     glass.style.position = "relative"
