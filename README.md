@@ -3,7 +3,7 @@ smiley faced slider.
 
 Use:
 
-```
+```javascript
 // add the slider to a div with id "slider"
 var s = new SmileySlider(document.getElementById("slider"))
 
