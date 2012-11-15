@@ -1,6 +1,8 @@
 This is designed to let users rate how happy they are with something using a 
 smiley faced slider.
 
+[See the Demo](http://lkorth.github.com/smiley-slider/)
+
 Use:
 
 ```javascript
