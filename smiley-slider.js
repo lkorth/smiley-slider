@@ -41,7 +41,7 @@ function SmileySlider(container, imgSrc) {
     face.width = "36"
     face.height = "37"
     head.appendChild(face)
-    
+	
     var glass = document.createElement('div')
     glass.style.width = width + "px"
     glass.style.height = 80 + "px"
@@ -49,7 +49,19 @@ function SmileySlider(container, imgSrc) {
     glass.style.marginBottom = '-' + glass.style.height
     glass.style.position = "relative"
     base.appendChild(glass)
-    
+	
+	var knob = document.createElement('div')
+	knob.style.width = headWidth / 3 + "px"
+	knob.style.height = "10px"
+	knob.style.marginLeft = headWidth / 3
+	knob.style.marginRight = headWidth / 3
+	knob.style.marginTop = "62"
+	knob.style.position = "relative"
+	knob.style.backgroundColor = "#414084"
+	knob.style.borderRadius = "15"
+	knob.style.zIndex = "-1"
+	base.appendChild(knob)
+
     container.appendChild(base)
 
     //////////////////////////////////////////////////////////////
@@ -62,6 +74,7 @@ function SmileySlider(container, imgSrc) {
             return getPos(head).x - getPos(base).x
         } else {
             head.style.left = Math.round(cap(e, 0, maxHeadX)) + "px"
+			knob.style.left = head.style.left
             var p = position()
             drawFace(face, 100, p, 0.8)
             if (onHeadMove) onHeadMove(p)
